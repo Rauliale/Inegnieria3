@@ -1,0 +1,101 @@
+package Sistema.Modulos;
+
+public class PoligonoRegular {
+    private int n;
+    private double lado;
+    private double x;
+    private double y;
+    private static int cantidad = 0;
+
+   
+    //sin parametros crea un poligono con los valores predeterminados
+    public PoligonoRegular() {
+        this.n = 3;
+        this.lado = 1;
+        this.x = 0;
+        this.y = 0;
+        cantidad++;
+    }
+    
+    //posicion en (0,0) con los lados especificados
+    public PoligonoRegular(int n, double lado) {
+        this.n = n;
+        this.lado = lado;
+        this.x = 0;
+        this.y = 0;
+        cantidad++;
+    }
+
+    //si le pasamos todos los parametros crea el poligono especificado
+    public PoligonoRegular(int n, double lado, double x, double y) {
+        this.n = n;
+        this.lado = lado;
+        this.x = x;
+        this.y = y;
+        cantidad++;
+    }
+    
+    
+    
+    //geters y seters para todos los atributos
+    public int getN() {
+        return n;
+    }
+
+    public void setN(int n) {
+        this.n = n;
+    }
+
+    public double getLado() {
+        return lado;
+    }
+
+    public void setLado(double lado) {
+        this.lado = lado;
+    }
+
+    public double getX() {
+        return x;
+    }
+
+    public void setX(double x) {
+        this.x = x;
+    }
+
+    public double getY() {
+        return y;
+    }
+
+    public void setY(double y) {
+        this.y = y;
+    }
+    
+    //obtener perimetro del poligono 
+    public double getPerimetro(){
+        double per;
+        per = n*lado;
+        return per;
+    }
+    
+    //obtener area del poligono 
+    public double getArea(){
+        double area;
+        double a;
+        double apotema;
+        a = (Math.PI/n);
+        apotema= lado/(2*Math.tan((a/2)));
+        area = ((n*lado*apotema)/2);
+        return area;
+    }
+    
+	//get de cantidad
+    public int getCantidad(){
+        return cantidad;
+    }
+    
+    
+    
+
+    
+    
+}
