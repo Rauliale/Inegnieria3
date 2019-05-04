@@ -65,7 +65,7 @@ public class PoligonoRegular {
     public double getY() {
         return y;
     }
-
+	//establecemos Y
     public void setY(double y) {
         this.y = y;
     }
